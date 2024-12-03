@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Separar XML</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="https://marcoscontabilidade.com.br/img/logo/design-sem-nome-5_8a91d63488cf0ba45d466ecf.png" alt="Logo da Empresa" class="logo">
+        <h1>Separador de XML</h1>
+        <div class="input-container">
+            <input type="file" id="xmlInput" multiple accept=".xml" style="display: none;">
+            <button id="importBtn">Importar XMLs</button>
+            <button id="loadBtn">Carregar</button>
+        </div>
+        <div class="notes-section">
+            <div class="box">
+                <h2>Nº Notas</h2>
+                <textarea id="notas"></textarea>
+                <label>Quantidade:</label>
+                <input type="text" id="quantidadeNotas" readonly>
+            </div>
+            <div class="box">
+                <h2>Nº XML</h2>
+                <textarea id="xmlNotas" readonly></textarea>
+                <label>Quantidade:</label>
+                <input type="text" id="quantidadeXmlNotas" readonly>
+            </div>
+        </div>
+        <div class="button-section">
+            <button id="verificarBtn">Verificar Notas Faltantes</button>
+            <button id="downloadNotasBtn">.xml das notas</button>
+            <button id="downloadAusentesBtn">.xml ausentes</button>
+        </div>
+        <div id="mensagemFaltantes" class="mensagem-faltantes" style="display: none;"></div>
+        <div>
+            <footer><p class="rodape">©️2024. Versão 0.04 - Atualizado em 31 de out. de 2024 - Desenvolvido por Arlan Arnor - Marcos Contabilidade Ltda.</p></footer>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
